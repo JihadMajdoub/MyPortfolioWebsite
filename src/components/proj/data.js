@@ -1,6 +1,7 @@
 import weatherForecastPic from './images/weatherforecast.png';
 import cryptoTrackerPic from './images/cryptotracker.png';
 import doodleJumpPic from './images/doodlejump.png';
+import portfolioWebsitePic from './images/portfoliowebsite.png';
 import { IoLogoJavascript, IoLogoSass, IoLogoPython } from 'react-icons/io';
 import { FaPhp, FaNode, FaReact, FaBootstrap } from 'react-icons/fa';
 import { SiMysql, SiCsharp, SiDjango } from 'react-icons/si';
@@ -26,22 +27,33 @@ export const myProjects = [
         title: 'Crypto Price Tracker',
         img: cryptoTrackerPic,
         git: 'https://github.com/JihadMajdoub/crypto-price-tracker',
+        live: '',
         desc: 'Crypto price tracker using ReactJS, JS, CSS and HTML. API taken from CoinGeko.',
         lang: [<IoLogoJavascript/>, <FaReact/>, <TiCss3/>, <TiHtml5/>]
     },
 
     {
         id: 3,
+        title: 'Portfolio Website',
+        img: portfolioWebsitePic,
+        git: 'https://github.com/JihadMajdoub/MyPortfolioWebsite',
+        live: '',
+        desc: 'This is the current portfolio website you are currently on. I used different ReactJS with the aid of a few React npm packages and used Sass for the styling.',
+        lang: [<IoLogoJavascript/>, <FaReact/>, <IoLogoSass/>, <TiHtml5/>]
+    },
+
+    {
+        id: 4,
         title: 'Doodle Jump',
         img: doodleJumpPic,
-        git: 'https://github.com/JihadMajdoub/WeatherForecast',
+        git: 'https://github.com/JihadMajdoub/Doodler-Game',
         live: 'https://www.google.co.uk',
         desc: 'Doodle Jump game created using Javascript.',
         lang: [<TiHtml5/>, <IoLogoJavascript/>, <TiCss3/>]
     },
 
     {
-        id: 4,
+        id: 5,
         title: 'Todo List',
         img: '',
         git: 'https://github.com/JihadMajdoub/WeatherForecast',
@@ -51,7 +63,7 @@ export const myProjects = [
     },
 
     {
-        id: 5,
+        id: 6,
         title: 'Job Listing Directory',
         img: '',
         git: 'https://github.com/JihadMajdoub/WeatherForecast',
