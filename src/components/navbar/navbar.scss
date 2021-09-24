@@ -1,0 +1,158 @@
+@import '../../global.scss';
+
+.navbar{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 11vh;
+    top: 0;
+    z-index: 2;
+    transition: all 1s ease;
+    overflow: hidden;
+
+    .wrapper {
+
+        padding-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 10vh;
+        overflow: hidden;
+
+        @include responsive(laptop) {
+            padding-left: 10px;
+        }
+        
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+
+            @include responsive(tab) {
+                padding-left: 20px;
+            }
+            @include responsive(phone) {
+                padding-left: 0;
+            }
+
+            
+
+            li{
+                text-align: center;
+                align-content: center;
+                width: 170px;
+                overflow: hidden;
+
+                @include responsive(laptop) {
+                    width: 140px;
+                }
+
+                @include responsive(tab) {
+                    width: 110px;   
+                }
+                @include responsive(phone) {
+                    width: 70px;
+                }
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.5s ease;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            overflow: hidden;
+
+            @include responsive(laptop) {
+                font-size: 15px;
+            }
+
+            @include responsive(tab) {
+                font-size: 12px;
+            }
+
+            @include responsive(phone) {
+                font-size: 10px;
+            }
+
+            @include hover-supported() {
+                color: crimson;
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+
+            .icon{
+                width: 25px;
+                height: 25px;
+                overflow: hidden;
+            
+                @include responsive(tab) {
+                    width: 30px;
+                    height: 30px;   
+                }
+
+                @include responsive(phone) {
+                    width: 20px;
+                    height: 20px;
+                }
+
+            }
+            
+        }
+        .logo{
+            
+            .logo-title{
+                font-size: 35px;
+                font-weight: 800;
+                color: white;
+                padding-left: 20px;
+                padding-right: 20px;
+                align-items: center;
+                text-align: center;
+
+                @include responsive(laptop) {
+                    font-size: 30px;
+                    padding: 0;
+                }
+
+                @include responsive(tab) {
+                    font-size: 35px;   
+                }
+
+                @include responsive(phone) {
+                    font-size: 25px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                @include hover-supported() {
+                    color: crimson;
+                    cursor: pointer;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 555px) { @content };
+    }
+
+    @if $breakpoint == tab {
+        @media only screen and (max-width: 768px) { @content };
+    }
+
+    @if $breakpoint == laptop {
+        @media only screen and (max-width: 1100px) { @content };
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 1400px) { @content };
+    }
+}
+
+@mixin hover-supported {
+    @media only screen and (min-width: 800px) {
+        &:hover {
+            @content;
+        }
+    }
+}

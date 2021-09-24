@@ -1,0 +1,124 @@
+@import '../../global.scss';
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(51, 34, 61, 0.8)), url(./hero-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include responsive(phone) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @include responsive(tab) {
+        justify-content: space-evenly;
+    }
+
+    
+
+
+    .hero-text{
+        margin-left: 70px;
+        margin-bottom: 200px;
+        margin-top: 180px;
+        padding-bottom: 40px;
+        overflow: hidden;
+
+        
+        @include responsive(tab) {
+            display: block;
+            margin: 20px;
+        }
+
+        @include responsive(laptop) {
+            margin-left: 20px;
+        }
+
+
+        .intro-text{
+            font-size: 50px;
+            font-weight: 700;
+            color: white;
+
+            @include responsive(laptop) {
+                font-size: 35px;
+            }
+
+            @include responsive(phone) {
+                font-size: 40px !important;
+                text-align: center;
+            }
+
+            @include responsive(tab) {
+                font-size: 30px;
+            }
+
+
+            h1{
+                margin: 0;
+            }
+        }
+        .intro-sent{
+            font-size: 40px;
+            font-weight: 700;
+            color: white;
+
+            @include responsive(laptop) {
+                font-size: 35px;
+            }
+
+            @include responsive(phone) {
+                font-size: 40px !important;
+                text-align: center;
+            }
+            @include responsive(tab) {
+                font-size: 30px;
+            }
+
+        }
+        span{
+            color: crimson;
+            font-weight: 700;
+            font-size: inherit;
+        }
+        
+        
+    }
+    
+    .lottie-image{
+        position: relative;
+        background-color: crimson;
+        width: 500px;
+        height: 450px;
+        margin-right: 100px;
+        margin-top: 20px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @include responsive(phone) {
+            display: none;
+        }
+        
+        @include responsive(tab) {
+            height: 250px !important;
+            width: 350px !important;
+            margin-right: 20px !important;
+        }
+
+        @include responsive(laptop) {
+            height: 300px;
+            width: 350px ;
+            margin-right: 10px;
+        }
+
+    }
+    
+    
+}
+
+

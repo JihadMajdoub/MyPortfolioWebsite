@@ -1,0 +1,194 @@
+@import '../../global.scss';
+
+.about{
+    overflow: hidden;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(51, 34, 61, 0.8)), url('./background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+
+    h2{
+        font-size: 45px;
+        font-weight: 800;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        color: white;
+
+        @include responsive(tab) {
+            font-size: 30px;
+            font-weight: 400;
+        }
+        
+        @include responsive(phone) {
+            font-size: 30px;
+            font-weight: 600;
+            display: block;
+            margin-left: 30px;
+            margin-right: 30px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+
+    .all-about-me{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 20px;
+        padding-left: 70px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        overflow: hidden;
+
+        @include responsive(laptop) {
+            padding: 5px 30px 20px 30px;
+            margin-top: 0px;
+        }
+
+        @include responsive(phone) {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 5px 10px 5px;
+            justify-content: space-between;
+        }
+
+        @include responsive(tab) {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 10px 0px 10px;
+            margin-top: 0px;
+        }
+        
+
+        .information{
+            flex: 0.9;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            padding: 10px;
+            overflow: scroll;
+            background-color: white;
+            opacity: 0.7;
+            border-radius: 20px;
+            
+            @include responsive(laptop){
+                margin-top: 10px;
+            }
+
+            @include responsive(phone) {
+                margin: 0;
+                overflow: scroll;
+                
+            }
+            @include responsive(tab) {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                padding: 5px;
+                overflow: hidden;
+            }
+
+
+
+            p{
+                font-size: 18px;
+                line-height: 25px;
+                margin: 10px 15px 15px 15px;
+                font-weight: 500;
+                color: black;
+                overflow: hidden;
+
+                @include responsive(laptop) {
+                    margin: 5px 10px 5px 10px;
+                }
+
+                @include responsive(phone) {
+                    font-size: 12px;
+                    line-height: 15px !important;
+                    margin: 5px !important;
+                } 
+
+                @include responsive(tab) {
+                    line-height: 22px;
+                    margin: 0px 10px 0px 10px;
+                    font-weight: 400;
+                }
+
+            }
+        }
+    }
+
+    .headshot-container{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+
+        @include responsive(phone) {
+            margin-top: 5px;
+            padding-right: 0;
+        }
+
+        @include responsive(tab) {
+            margin-top: 5px;
+            padding: 0;
+        }
+        
+        
+        
+
+        .headshot{
+            width: 300px;
+            height: 300px;
+            border-radius: 150px;
+            background-color: white;
+            border-style: solid;
+            border-width: 5px;
+
+            @include responsive(phone) {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 5px;
+            }
+            @include responsive(tab) {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 5px;
+            }
+        }
+
+        .CV{
+            text-decoration: none;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            font-size: 30px;
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 70px;
+            text-align: center;
+            color: white;
+            background-color: crimson;
+            border: black solid;
+            transition: 0.5s all ease;
+            
+            @include responsive(phone) {
+                display: none;
+            }
+            @include responsive(tab) {
+                display: none;
+            }
+            &:hover{
+                background-color: white;
+                color: crimson;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+

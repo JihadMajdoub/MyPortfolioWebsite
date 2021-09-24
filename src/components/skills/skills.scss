@@ -1,0 +1,189 @@
+@import '../../global.scss';
+
+.skills{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(51, 34, 61, 0.8)), url('./skills-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+
+    h2{
+        margin-top: 20px;
+        font-size: 45px;
+        font-weight: 800;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        @include responsive(tab) {
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        @include responsive(phone) {
+            font-size: 30px;
+            font-weight: 600;
+            display: block;
+            margin-left: 30px;
+            margin-right: 30px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+
+    .langs{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        margin-top: 25px;
+        margin-left: 180px;
+        margin-right: 180px;
+
+        @include responsive(laptop) {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        @include responsive(tab) {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 50px;
+        }
+
+        @include responsive(phone) {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 30px;
+        }
+
+
+
+        .lang{
+            margin: 10px;
+
+            .lang-icon{
+                color: white;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                cursor: pointer;
+                transition: 0.3s all ease;
+
+                @include responsive(phone) {
+                    width: 50px;
+                    height: 50px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                
+            }
+
+            
+            .html5{
+                @include hover-supported() {
+                    color: #e34f26;
+                    transform: scale(1.2);
+                }
+                
+            }
+
+            .css3{
+                @include hover-supported() {
+                    color: #2965f1;
+                    transform: scale(1.2);
+                }
+                
+            }
+
+            .js{
+                @include hover-supported() {
+                    color: #f7df1e;
+                    transform: scale(1.2);  
+                }
+               
+            }
+            
+            .sass{
+                @include hover-supported() {
+                    color: #cc6699;
+                    transform: scale(1.2);
+                }
+                
+            }
+
+            .react{
+                @include hover-supported() {
+                    color: #00d8ff;
+                    transform: scale(1.2);
+                }
+                
+            }
+
+            .jquery{
+                
+                @include hover-supported() {
+                    color: #0769ad;
+                    transform: scale(1.2);
+                }
+                
+            }
+            
+            .node{
+                
+                @include hover-supported() {
+                    color: #6cc24a;
+                    transform: scale(1.2);
+                }
+                
+            }
+
+            .php{
+                
+                @include hover-supported() {
+                    color: #4f5b93;
+                    transform: scale(1.2);
+                }
+                
+            }
+
+            .sql{
+                
+                @include hover-supported() {
+                    color: #f29111;
+                    transform: scale(1.2);
+                }
+                
+            }
+
+            .java{
+               
+                @include hover-supported() {
+                    color: #5382a1;
+                    transform: scale(1.2);
+                }
+                
+            }
+
+            .csharp{
+                @include hover-supported() {
+                    color: #5e03ba;
+                    transform: scale(1.2);
+                }
+                
+            }
+            
+            .python{
+                
+                @include hover-supported() {
+                    color: #4584b6;
+                    transform: scale(1.2);
+                }
+          
+            }
+        }
+    }
+}

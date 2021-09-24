@@ -1,0 +1,277 @@
+@import '../../global.scss';
+
+.projects{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(51, 34, 61, 0.8)), url(./Hero.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+
+    .arrow{
+        position: absolute;
+        cursor: pointer;
+        height: 80px;
+        width: 80px;
+        margin-top: 300px;
+        color: white;
+
+        @include responsive(laptop) {
+            height: 40px;
+            width: 40px;
+            color: crimson;
+        }
+
+        @include responsive(tab) {
+            margin-top: 300px;
+        }
+
+        @include responsive(phone) {
+            height: 50px;
+            width: 50px;
+            margin-top: 30px !important;
+
+        }
+
+        &.left{
+            left: 100px;
+
+            @include responsive(laptop) {
+                left: 10px;
+            }
+            
+            @include responsive(phone) {
+                left: 0px;
+            }
+        }
+
+        &.right{
+            right: 100px;
+
+            @include responsive(laptop) {
+                right: 10px;
+            }
+
+            @include responsive(phone) {
+                right: 0px;
+            }
+        }
+    }
+
+
+    h2{
+        font-size: 45px;
+        font-weight: 800;
+        margin-top: 25px;
+        color: white;
+
+        @include responsive(tab) {
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        @include responsive(phone) {
+            font-size: 30px;
+            font-weight: 600;
+            display: block;
+            margin-left: 30px;
+            margin-right: 30px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+
+    .slider{
+        margin-top: 150px;
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease;
+
+        @include responsive(tab) {
+            margin-top: 150px;
+        }
+        @include responsive(phone) {
+            margin-top: 80px;
+            height: max-content;
+        }
+
+        .slider-container{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include responsive(phone) {
+                margin-top: 30px;
+            }
+            
+
+            .slider-item{
+                width: 700px;
+                height: 100%;
+                background-color: white;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                @include responsive(tab) {
+                    width: 450px;
+                }
+
+                @include responsive(phone) {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    width: 80%;
+                    min-width: 300px;
+                }
+
+                .left{
+                    flex: 5;
+                    height: 100%;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+
+                    .left-container{
+                        width: 90%;
+                        height: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        @include responsive(tab) {
+                            height: 100%;
+                        }
+
+                        @include responsive(phone) {
+                            justify-content: space-evenly;
+                        }
+
+                        p{
+                            font-size: 15px;
+                            font-weight: 400;
+                            margin: 20px 5px 5px 5px;
+
+                            @include responsive(phone) {
+                                margin: 10px 5px 5px 5px;
+                            }
+                        }
+
+                        .icon-container{
+                            padding: 10px 1px 10px 1px;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-evenly;
+
+                            @include responsive(tab) {
+                                justify-content: space-around;
+                            }
+
+                            svg{
+                                width: 35px;
+                                height: 35px;
+                                transition: all 0.3s ease;
+
+                                @include responsive(tab) {
+                                    width: 40px;
+                                    height: 40px;
+                                }
+
+                                @include hover-supported() {
+                                    transform: scale(1.2);
+                                }
+                            }
+                            
+                        }
+
+                        .links{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+
+                            .project-link{
+                                text-align: center;
+                                font-size: 20px;
+                                width: 100px;
+                                margin-top: 10px;
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                margin-bottom: 20px;
+                                text-decoration: none;
+                                border: solid black 2px;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                                color: white;
+                                background: crimson;
+                                border-radius: 10px;
+
+                                @include responsive(tab) {
+                                    width: 150px;
+                                    margin: 10px 2px 20px 2px;
+                                    font-size: 20px;
+                                }
+
+                                @include hover-supported() {
+                                    transform: scale(1.2);
+                                    background: white;
+                                    color: crimson;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right{
+                    flex: 8;
+                    height: 100%;
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    overflow: hidden;
+
+                    @include responsive(phone) {
+                        flex: 5;
+                    }
+
+                    .right-container{
+                        width: 90%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        @include responsive(phone) {
+                            justify-content: space-between;
+                            width: 100%;
+                        }
+
+                        h3{
+                            font-size: 20px;
+                            text-align: center;
+                            overflow: hidden;
+
+                        }
+    
+                        .project-screenshot{
+                            @include responsive(phone) {
+                                height: 200px;
+                            }
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}

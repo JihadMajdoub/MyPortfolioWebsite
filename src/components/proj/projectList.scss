@@ -1,0 +1,19 @@
+.projectList{
+    width: 150px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: black solid;
+    transition: all 0.5s ease;
+
+    &.active{
+        background-color: #009dfe;
+        color: white;
+    }
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
